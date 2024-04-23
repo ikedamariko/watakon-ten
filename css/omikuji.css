@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+/*
+.wrap_contents {
+	background-image: url(../omikuji/img/omikuji_header.png),url(../omikuji/img/omikuji_bottom_bg.jpg);
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-size: 100% , cover;
+	padding-top: 50px;
+	background-position: center top, center bottom;
+}
+*/
+.wrap_contents {
+	background-image: url(../omikuji/img/omikuji_header.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 50px;
+	background-position: center top;
+}
+.page_wrap.wrap_contents h1 p {
+	width: 85%;
+	font-size: calc(100vw * 14 / 375);
+}
+.page_wrap.wrap_contents h1 {
+	color: #37272E;
+	font-size: 1.5em;
+	margin-bottom: 0 !important;
+}
+.page_wrap.wrap_contents h1 .new_year_txt {
+	margin: 1em auto 0 !important;
+	line-height: 1.4;
+}
+#omikuji .event_start {
+	color: #70635E;
+	text-align: center;
+	width: 78%;
+	margin: 1em auto 3em;
+}
+#omikuji .event_start .anime_name {
+	padding: 0.5em 0 !important;
+	font-size: calc(100vw * 16 / 375);
+}
+#omikuji .event_start .anime_name span {
+	font-size: 0.7em;
+}
+#omikuji .event_start:before,
+#omikuji .event_start:after {
+	content: url(../omikuji/img/line.svg);
+}
+#omikuji .uranai_area {
+	position: relative;
+}
+#omikuji .uranai_area .img_omikuji {
+	width: 44%;
+	margin: 0 auto !important;
+}
+#omikuji .uranai_area .kiyoka,
+#omikuji .uranai_area .miyo {
+	position: absolute;
+	width: 26vw;
+	bottom: 0;
+}
+#omikuji .uranai_area .kiyoka {
+	left: 2vw; 
+}
+#omikuji .uranai_area .miyo {
+	right: 2vw; 
+}
+#omikuji button {
+	border: none;
+	background: none;
+}
+#omikuji .btn_uranau,
+#omikuji .btn_share {
+	width: 72%;
+	margin: 2em auto 0 !important;
+}
+#omikuji .btn_share {
+	display: block;
+}
+button {
+	cursor: pointer;
+}
+/*
+#omikuji .primary {
+	margin-bottom: 0;
+}
+*/
+/*
+.white_area {
+	width: 100%;
+	background: #fff;
+	height: 4em;
+	margin-bottom: 4em;
+}
+*/
+#omikuji .reload {
+	text-align: center;
+	padding: 2em 0 !important;
+}
+
+
+/* result */
+#omikuji .result_contents {
+	padding: 0 1em;
+}
+#omikuji .result_wrap_contents {
+	border: 4px solid #d35344;
+	padding: 4em 2em;
+	background: #fff;
+	margin: auto;
+	text-align: center;
+}
+#omikuji .result_wrap_contents h2 {
+	position: relative;
+	top: auto;
+}
+#omikuji .result_wrap_contents h2 span {
+	display: none;
+}
+#omikuji .result_wrap_contents dt {
+	background-color: #d35344;
+	padding: 0.3em 0 !important;
+	color: #fff;
+	border-radius: 100px;
+	position: relative;
+	width: 100%;
+	font-size: calc(100vw * 16 / 375);
+	margin: 0 auto;
+}
+#omikuji .result_wrap_contents .message {
+	font-size: calc(100vw * 16 / 375);
+	line-height: 1.6;
+	margin: 1.4em 0;
+	padding-bottom: 1.4em;
+}
+#omikuji .result_wrap_contents .border_btm {
+	border-bottom: 8px dotted #d35344;
+	margin-bottom: 2em;
+	padding-bottom: 1.5em;
+}
+#omikuji .result_wrap_contents dd.ttl {
+	font-size: calc(100vw * 24 / 375);
+	margin: 18px 0 !important;
+	font-weight: bold;
+	line-height: 1.2;
+}
+#omikuji .result_wrap_contents .data_txt {
+	text-align: left;
+	margin: 1.4em 0;
+	line-height: 1.6;
+	font-size: calc(100vw * 14 / 375);
+}
+.result {
+   display: none;
+}
+
+.page_link {
+	display: inline-block;
+	transition: all .3s ease 0s;
+	text-decoration: none;
+}
+.page_link:hover {
+	cursor: pointer;
+	transform: scale(0.95);
+}
+button:hover,
+.btn_share:hover {
+  animation: hoverShake 0.15s linear 3;
+  opacity: 0.8;
+}
+.reload button:hover {
+	animation: none;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(1deg, 1deg);}
+  75% {transform: skew(-1deg, -1deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+/* --------------------------------------
+   　heart button
+-------------------------------------- */
+.heart-button {
+  position: relative;
+	display: inline-block;
+	letter-spacing: 0.1em;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	text-decoration: none;
+	background: none;
+}
+.heart-button::before,
+.heart-button::after {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+}
+.heart-button::before {
+  background-image: url('../omikuji/img/heart.svg');
+  top: 0;
+  left: -12px;
+}
+.heart-button::after {
+  background-image: url('../omikuji/img/heart-reverse.svg');
+  bottom: -6px;
+  right: -14px;
+}
+.heart-button:hover::before {
+  animation: heart 1.5s infinite ease-out;
+}
+.heart-button:hover::after {
+  animation: heart 1.5s 0.2s infinite ease-out;
+}
+
+@keyframes heart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heart-button::before {
+    animation: heart 1.5s infinite ease-out;
+  }
+  .heart-button::after {
+    animation: heart 1.5s 0.2s infinite ease-out;
+  }
+}
+
+/* --------------------------------------
+   　PC style	
+-------------------------------------- */
+@media screen and (min-width: 960px) {
+   .page_wrap.wrap_contents h1 p {
+		width: 72%;
+	}
+	#omikuji .event_start {
+		font-size: 1.5em;
+		width: 50%;
+		margin: 1em auto 3em;
+	}
+	.page_wrap.wrap_contents h1 .new_year_txt {
+		font-size: 1em;
+	}
+	#omikuji .uranai_area .kiyoka,
+	#omikuji .uranai_area .miyo {
+		position: absolute;
+		width: 180px;
+		bottom: 0;
+	}
+	#omikuji .uranai_area .kiyoka {
+		left: 170px; 
+	}
+	#omikuji .uranai_area .miyo {
+		right: 170px; 
+	}
+	#omikuji .uranai_area .img_omikuji {
+		width: 25%;
+	}
+	#omikuji .btn_uranau,
+	#omikuji .btn_share {
+		width: 340px;
+		margin: 2em auto 0 !important;
+	}
+	
+	/* result */
+	#omikuji .result_contents {
+		padding: 0;
+	}
+	#omikuji .result_wrap_contents {
+		width: 48%;
+	}
+	#omikuji .result_wrap_contents dt {
+		width: 260px;
+		font-size: 20px;
+	}
+	#omikuji .result_wrap_contents .data_txt {
+		font-size: 18px;
+	}
+	#omikuji .result_wrap_contents .message,
+	#omikuji .event_start .anime_name {
+		font-size: 22px;
+	}
+	#omikuji .result_wrap_contents dd.ttl {
+		font-size: 32px;
+	}
+	#omikuji .result_wrap_contents .border_btm {
+		margin-bottom: 2.4em;
+		padding-bottom: 2.4em;
+	}
+	#omikuji .message.border_btm {
+		padding-bottom: 1.4em;
+	}
+}	
+
+   
+   
+   
+   
+   
